@@ -19,9 +19,10 @@
       <div class="calculator-container">
         <form>
           <div class="form-input">
-            <div class="input">
+            <div class="input inp1">
               <label for="day">Day</label><br />
               <input
+                class="fi1"
                 type="number"
                 min="1"
                 max="31"
@@ -31,9 +32,10 @@
               /><br />
               <div class="validation-box"></div>
             </div>
-            <div class="input">
+            <div class="input inp2">
               <label for="month">Month</label><br />
               <input
+                class="fi2"
                 type="number"
                 min="1"
                 max="12"
@@ -43,11 +45,19 @@
               />
               <div class="validation-box"></div>
             </div>
-            <div class="input">
+            <div class="input inp3">
               <label for="Year">Year</label><br />
-              <input type="number" id="year" name="year" placeholder="YYYY" />
+              <input
+                class="fi3"
+                type="number"
+                id="year"
+                name="year"
+                placeholder="YYYY"
+              />
+              <div class="validation-box"></div>
             </div>
           </div>
+
           <div class="form-btn">
             <hr />
             <label class="cursor: pointer;">
@@ -72,7 +82,6 @@
             </label>
           </div>
         </form>
-
         <div class="outcome-box">
           <h2><span class="years">YYYY</span> years</h2>
           <h2><span class="months">MM</span> months</h2>
@@ -80,5 +89,6 @@
         </div>
       </div>
     </main>
+    <script src="app.js"></script>
   </body>
 </html>
