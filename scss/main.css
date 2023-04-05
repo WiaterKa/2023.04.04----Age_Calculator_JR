@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transform: all 0.3s ease-in;
 }
 
 html {
@@ -14,22 +15,44 @@ html {
 main {
   display: flex;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
 }
 
 .calculator-container {
   background-color: white;
   width: 84rem;
-  height: 65rem;
+  height: 68rem;
   border-radius: 2.4rem 2.4rem 20rem 2.4rem;
   padding: 5.6rem;
   margin-inline: auto;
+}
+
+@media screen and (max-width: 990px) {
+  .calculator-container {
+    margin-inline: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .calculator-container {
+    padding: 4.8rem 2.4rem;
+    width: 80%;
+    height: auto;
+  }
 }
 
 .calculator-container .form-input {
   display: flex;
   gap: 3.2rem;
   justify-content: flex-start;
+}
+
+@media screen and (max-width: 760px) {
+  .calculator-container .form-input {
+    gap: 1.6rem;
+    justify-content: space-around;
+  }
 }
 
 .calculator-container .form-input .input {
@@ -60,6 +83,24 @@ main {
   cursor: pointer;
 }
 
+@media screen and (max-width: 760px) {
+  .calculator-container .form-input .input input {
+    width: 8.7rem;
+    height: 5.4rem;
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .calculator-container .form-input .input input {
+    width: 6.5rem;
+    height: 4.4rem;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+  }
+}
+
 .calculator-container .form-input .input .validation-box {
   font-family: "Poppins";
   font-style: italic;
@@ -71,6 +112,7 @@ main {
 
 .calculator-container .form-btn {
   position: relative;
+  width: 100%;
 }
 
 .calculator-container .form-btn hr {
@@ -88,6 +130,22 @@ main {
   position: absolute;
   top: -5rem;
   right: 0rem;
+  transition: 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 760px) {
+  .calculator-container .form-btn svg {
+    width: 6.4rem;
+    height: 6.4rem;
+    padding: 1rem;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.calculator-container .form-btn svg:hover {
+  background-color: black;
 }
 
 .calculator-container .outcome-box {
@@ -104,6 +162,26 @@ main {
   color: #854dff;
 }
 
+@media screen and (max-width: 760px) {
+  .calculator-container .outcome-box span {
+    font-size: 7.6rem;
+    line-height: 6.1rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .calculator-container .outcome-box span {
+    font-size: 5.6rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .calculator-container .outcome-box span {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+
 .calculator-container .outcome-box h2 {
   font-family: "Poppins";
   font-style: italic;
@@ -112,4 +190,24 @@ main {
   line-height: 110%;
   letter-spacing: -0.02em;
   color: black;
+}
+
+@media screen and (max-width: 760px) {
+  .calculator-container .outcome-box h2 {
+    font-size: 7.6rem;
+    line-height: 6.1rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .calculator-container .outcome-box h2 {
+    font-size: 5.6rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .calculator-container .outcome-box h2 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
 }
